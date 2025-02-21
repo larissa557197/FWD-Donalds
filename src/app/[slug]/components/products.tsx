@@ -1,3 +1,4 @@
+import { formatCurrency } from "@/helpers/format-currency";
 import { Product } from "@prisma/client"; // Importa o tipo 'Product' do Prisma
 
 import Image from "next/image"; // Importa o componente de imagem otimizada do Next.js
@@ -36,7 +37,7 @@ const Products = ({ products }: ProductsProps) => {
             </p>
             <p className="pt-3 text-sm font-semibold">
               {/* preço do produto */}
-              {/* {formatCurrency(product.price)} */}
+              {formatCurrency(product.price)}
             </p>
           </div>
 

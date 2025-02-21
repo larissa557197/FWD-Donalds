@@ -18,7 +18,7 @@ const ProductHeader = ({ product }: ProductHeaderProps) => {
     return (
     <div className="relative w-full h-[300px] ">
       <Button
-        variant={"secundary"}
+        variant={"secondary"}
         size="icon"
         className="absolute left-4 top-4 z-50 rounded-full"
         onClick={handleBackClick}
@@ -34,7 +34,7 @@ const ProductHeader = ({ product }: ProductHeaderProps) => {
       />
 
       <Button
-        variant="secundary"
+        variant="secondary"
         size="icon"
         className="absolute right-4 top-4 z-50 rounded-full"
       >

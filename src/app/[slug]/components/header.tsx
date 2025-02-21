@@ -14,9 +14,9 @@ interface RestaurantHeaderProps {
 }
 
 // Define o componente RestaurantHeader e desestrutura a prop 'restaurant'.
-const router = useRouter(); 
-const RestaurantHeader = ({ restaurant }: RestaurantHeaderProps) => {
+const RestaurantHeader = ({ restaurant }: RestaurantHeaderProps) => { 
   const router = useRouter();
+  
   const handleBackClick = () => router.back();
   return (
     <div className="relative h-[250px] w-full">
