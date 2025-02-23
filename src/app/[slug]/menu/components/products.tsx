@@ -5,10 +5,8 @@ import Image from "next/image"; // Importa o componente de imagem otimizada do N
 
 import Link from "next/link"; // Importa o componente de navegação do Next.js
 
-import { useParams } from "next/navigation"; // Hook para obter os parâmetros da URL
+import { useParams, useSearchParams } from "next/navigation"; // Hook para obter os parâmetros da URL
 
-
-// import { formatCurrency } from "@/helpers/format-currency";
 
 // Define a interface para as props esperadas pelo componente
 interface ProductsProps {
@@ -19,6 +17,8 @@ interface ProductsProps {
 const Products = ({ products }: ProductsProps) => {
   // Obtém o parâmetro 'slug' da URL
   const { slug } = useParams<{ slug: string }>();
+  const searchParams = useSearchParams();
+  const consumptionMethod = searchParams.get("consumptionMethod");
   return (
     <div className="space-y-3 px-5">
       {/* Mapeia os produtos e os exibe como links clicáveis */}
