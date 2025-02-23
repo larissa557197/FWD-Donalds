@@ -12,11 +12,11 @@ import { formatCurrency } from "@/helpers/format-currency";
 
 import { CartContext } from "../contexts/cart";
 import CartProductItem from "./cart-product-item";
-//import FinishOrderDialog from "./finish-order-dialog";
+import FinishOrderDialog from "./finish-order-dialog";
 
 const CartSheet = () => {
   const [finishOrderDialogIsOpen, setFinishOrderDialogIsOpen] = useState(false);
-  const { isOpen, toggleCart, products, total} = useContext(CartContext);
+  const { isOpen, toggleCart, products, total } = useContext(CartContext);
   return (
     <Sheet open={isOpen} onOpenChange={toggleCart}>
       <SheetContent className="w-[80%]">
@@ -43,10 +43,10 @@ const CartSheet = () => {
           >
             Finalizar pedido
           </Button>
-          {/* <FinishOrderDialog
+          <FinishOrderDialog
             open={finishOrderDialogIsOpen}
             onOpenChange={setFinishOrderDialogIsOpen}
-          /> */}
+          />
         </div>
       </SheetContent>
     </Sheet>
